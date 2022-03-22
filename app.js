@@ -1,6 +1,7 @@
 var express = require('express')
 var app = express()
 
+
 app.get('/', function(req, res)
 {
     res.json(createMetadata(req.originalUrl.substring(2)))
@@ -105,6 +106,6 @@ function getCaseImage(tokenId)
     return "https://exilesgame.xyz/images/case/"+caseId+".png";
 }
 
-app.listen(3000, function(){
+app.listen(3000, "0.0.0.0", function(){
     console.log('Server is running')
 })
